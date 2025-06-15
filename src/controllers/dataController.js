@@ -12,7 +12,7 @@ async function getData(req, res) {
 
 async function createData(req, res) {
     try {
-        const count = parseInt(req.params.count) || 10; // Default to 10 if no count provided or invalid
+        const count = parseInt(req.params.count) || 10; 
         
         if (count <= 0 || count > 1000) {
             return res.status(400).json({ message: 'Count must be between 1 and 1000' });
